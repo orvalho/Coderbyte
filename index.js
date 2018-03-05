@@ -1,4 +1,4 @@
-<script>
+
 
 // First Reverse Challenge
 
@@ -17,10 +17,9 @@ for ( var i = 0; i < arr.length; i++) {
 }
 
 str = newArr.join(""); // rejoin array into a string
-
 return str;
 }
 
 FirstReverse(readline());
 
-</script>
+
