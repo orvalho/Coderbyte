@@ -1,4 +1,4 @@
-/* First Reverse Challenge
+/* #1 First Reverse Challenge
  * Using the JavaScript language, have the function FirstReverse(str) take the str parameter being passed
  * and return the string in reversed order. For example: if the input string is "Hello World and Coders"
  * then your program should return the string sredoC dna dlroW olleH.
@@ -22,7 +22,7 @@ FirstReverse(readline());
 
 
 /*********************************************************************************/
-/* Letter Changes Challenge
+/* #2 Letter Changes Challenge
  * Using the JavaScript language, have the function LetterChanges(str) take
  * the str parameter being passed and modify it using the following algorithm.
  * Replace every letter in the string with the letter following it in the alphabet
@@ -59,3 +59,27 @@ function LetterChanges ( str ) {
  }
 
 LetterChanges(readline());
+
+
+
+/*********************************************************************************/
+/* #3 Letter Capitalize Challenge
+ * Using the JavaScript language, have the function LetterCapitalize(str) take
+ * the str parameter being passed and capitalize the first letter of each word.
+ * Words will be separated by only one space.
+*/
+
+function LetterCapitalize ( str ) {
+
+    var arr = str.split(" ");
+    var newArr = [];
+
+    for ( var i = 0; i < arr.length; i++ ) {
+        newArr[i] = arr[i].substr(0,1).toUpperCase() + arr[i].substr(1);
+    }
+
+    str = newArr.join(" ");
+    return str;
+}
+
+LetterCapitalize(readline());
