@@ -207,3 +207,42 @@ function TimeConvert ( num ) {
    
 TimeConvert(readline());
 
+
+
+/*********************************************************************************/
+// #9 Longest Word Challenge
+/*
+* Using the JavaScript language, have the function LongestWord(sen) take the sen parameter
+* being passed and return the largest word in the string. If there are two or more words
+* that are the same length, return the first word from the string with that length. Ignore
+* punctuation and assume sen will not be empty.
+*/
+
+function LongestWord ( sen ) { 
+	
+  var arr = sen.split(" "); // splitting a string into an array of words
+  var elementLength = [];
+  
+  for ( var i = 0; i < arr.length; i++ ) { 
+    arr[i] = arr[i].replace(/[^a-z0-9]/gi, ""); // ignoring punctuation
+    elementLength[i] = arr[i].length; // calculating length of each word
+  }
+  
+  var max = Math.max(...elementLength); // finding the longest word
+  var maxValues = [];
+  
+  for ( i = 0; i < arr.length; i++ ) {
+    if ( max === elementLength[i] ) { // checking if there is two or more words that are the same length
+      maxValues.push(arr[i]);
+    }
+  }
+    
+  var finalMax = maxValues[0]; // finding the first longest word
+  return finalMax;
+}
+
+LongestWord(readline());
+
+
+
+
